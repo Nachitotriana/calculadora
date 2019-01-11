@@ -12,12 +12,27 @@ import java.awt.image.ImageObserver;
  * @author 34646
  */
 public class ventanaCalculadora extends javax.swing.JFrame {
+    
+        double operando1 = 0; //primer numero que se opera, el double es capaz de entender numeros enteros y decimales
+        
+        String operacion = ""; // string es capaz de entender simbolos como sumas, resta, las comas...
+        
+        
+        
 
     /**
      * Creates new form ventanaCalculadora
      */
     public ventanaCalculadora() {
         initComponents();
+    }
+    private void numeroPulsado (String numero){
+        if(pantalla.getText() == "0"){
+            pantalla.setText(numero);
+        }
+        else {
+            pantalla.setText(pantalla.getText() + numero);
+        }
     }
 
     /**
